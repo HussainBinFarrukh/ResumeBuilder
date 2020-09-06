@@ -1,7 +1,7 @@
 //Data used when the user hits "Example" btn
 const data = {
   header: {
-    name: "James Clark",
+    name: "Hussain Bin Farrukh",
     address: "",
     city: "Phoenix",
     state: "AZ",

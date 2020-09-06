@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import classes from "./Template.module.css";
 import { ResumeContext } from "../../../contexts/ResumeContext";
-import data from '../../../utils/fake_data';
 
 function ProfessionalP() {
   const { content, control, contentFake } = useContext(ResumeContext);
@@ -19,7 +18,7 @@ function ProfessionalP() {
   let dash= "-";
   if (Object.keys(contentUse.professional).length < 5) {
     title = "";
-    dash="";
+    dash="-";
   } else {
     title = (
       <h5 style={{borderBottom: "solid 2px", marginTop: "5px", paddingBottom: "5px"}}>
@@ -27,7 +26,7 @@ function ProfessionalP() {
       </h5>
     );
   }
-  let bulletProfessional4 = contentUse.professional.desc2.map((el, index) => {
+  let bulletProfessional4 = contentUse.professional.desc4.map((el, index) => {
     if (el === "") {
       return "";
     } else {
@@ -96,7 +95,7 @@ function ProfessionalP() {
         <span style={{float: "right", fontStyle: "italic" }}>{contentUse.professional.start3}</span>
         <span style={{float: "right", fontStyle: "italic"}}> {contentUse.professional.end3} {dash} &nbsp; </span>
       </p>
-      <ul>{bulletProfessional3}</ul>
+      <ul>{bulletProfessional2}</ul>
               <p>
         <strong>{contentUse.professional.company4}</strong>{" "}
         <strong><span style={{float: "right"}}>{contentUse.professional.local4}</span></strong>
@@ -106,7 +105,7 @@ function ProfessionalP() {
         <span style={{float: "right", fontStyle: "italic" }}>{contentUse.professional.start4}</span>
         <span style={{float: "right", fontStyle: "italic"}}> {contentUse.professional.end4} {dash} &nbsp; </span>
       </p>
-      <ul>{bulletProfessional4}</ul>
+      <ul>{bulletProfessional2}</ul>
       </div>
     </div>
   );

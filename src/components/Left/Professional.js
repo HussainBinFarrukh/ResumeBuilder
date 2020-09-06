@@ -19,19 +19,12 @@ function Professional() {
   };
   return (
     <div className="">
-      <h4 style={{textAlign: "center"}}>Professional Experience</h4>
+      <h4 style={{textAlign: "center", marginBottom: "40px"}}>Professional Experience</h4>
       <form
         className={classes.formStyle}
         noValidate
         autoComplete="off"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-
-
-
-
-
-
+        onSubmit={handleSubmit(onSubmit)}> 
       <button 
       class="btn btn-primary" 
       type="button" data-toggle="collapse" 
@@ -41,9 +34,9 @@ function Professional() {
       variant="contained"
       color="secondary"
       type="submit"
-      style={{ color: "#0298B8", background: "white", border: "none" }}
+      style={{ color: "#0298B8", background: "white", border: "none", textAlign: "left", paddingLeft: "80px" }}
       >
-      ~ Add First Experience
+     Add First Experience
     </button>
     <div class="collapse" id="collapseExample">
      <div class="card card-body">
@@ -96,7 +89,7 @@ function Professional() {
           label="End MM/YYYY"
           name="end1"
           variant="outlined"
-          defaultValue={content.professional.end1}
+          defaultValue={content.professional.end2}
           inputRef={register}
           // onChange={handleSubmit(onSubmit)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
@@ -156,9 +149,9 @@ function Professional() {
         variant="contained"
         color="secondary"
         type="submit"
-        style={{ color: "#0298B8", background: "white", border: "none" }}
+        style={{ color: "#0298B8", background: "white", border: "none", textAlign: "left", paddingLeft: "80px" }}
         >
-        ~ Add Second Experience
+         Add Second Experience
       </button>
 
     <div class="collapse" id="collapseExample2">
@@ -265,15 +258,15 @@ function Professional() {
         <button 
         class="btn btn-primary" 
         type="button" data-toggle="collapse" 
-        data-target="#collapseExample3" 
+        data-target="#collapseExample" 
         aria-expanded="false" 
         aria-controls="collapseExample"
         variant="contained"
         color="secondary"
         type="submit"
-        style={{ color: "#0298B8", background: "white", border: "none" }}
+        style={{ color: "#0298B8", background: "white", border: "none", textAlign: "left", paddingLeft: "80px" }}
         >
-        ~ Add Third Experience
+         Add Third Experience
       </button>
 
     <div class="collapse" id="collapseExample3">
@@ -377,15 +370,15 @@ function Professional() {
         <button 
         class="btn btn-primary" 
         type="button" data-toggle="collapse" 
-        data-target="#collapseExample4" 
+        data-target="#collapseExample" 
         aria-expanded="false" 
         aria-controls="collapseExample"
         variant="contained"
         color="secondary"
         type="submit"
-        style={{ color: "#0298B8", background: "white", border: "none" }}
+        style={{ color: "#0298B8", background: "white", border: "none", textAlign: "left", paddingLeft: "80px" }}
         >
-        ~ Add Fourth Experience
+         Add Fourth Experience
       </button>
 
     <div class="collapse" id="collapseExample4">

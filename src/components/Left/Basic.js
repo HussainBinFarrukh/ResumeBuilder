@@ -75,7 +75,7 @@ function Left() {
       <Button
         color="primary"
         onClick={useFakeData}
-        className={classes.rootAdd}
+        className={classes  }
         // style={{ marginTop: 15, marginRight: 20, height: "auto" }}
       >
         example

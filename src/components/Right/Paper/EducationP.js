@@ -26,43 +26,46 @@ function EducationP() {
     );
   }
 
-  let bulletEducation;
   let bulletEducation1;
+  let bulletEducation11;
 
   if (!contentUse.education.additional) {
-    bulletEducation = "";
-  } else {
-    bulletEducation = (
-        <li>{contentUse.education.additional}</li>
-    );
-  }
-  if (!contentUse.education.additional1) {
     bulletEducation1 = "";
   } else {
     bulletEducation1 = (
-        <li>{contentUse.education.additional1}</li>
+        <li>{contentUse.education.additional}</li>
     );
   }
+  // if (!contentUse.education.additional1) {
+  //   bulletEducation11 = "";
+  // } else {
+  //   bulletEducation11 = (
+  //       <li>{contentUse.education.additional1}</li>
+  //   );
+  // }
 
   return (
     <div className={classes.professionalResume}>
       <div >
         {title}
-        <p>
+        <p style={{float: "right", fontWeight: "700"}}>
+        {contentUse.education.city}
+      </p>
+        <p >
           <strong>{contentUse.education.institution} </strong>{" "}
           </p>
-          <p style={{float: "right"}}>
-          {contentUse.education.city}
-        </p>
-        <p>
-          {contentUse.education.major} 
-          </p>
-          <p style={{float: "right"}}>
+          <p style={{float: "right", fontStyle: "italic" }}>
           {contentUse.education.gradYear}
           </p>
-        {bulletEducation}
+        <p style={{ fontStyle: "italic" }}>
+          {contentUse.education.major} 
+          </p>
         {bulletEducation1}
+        {bulletEducation11}
       </div>
+
+
+
     </div>
   );
 }

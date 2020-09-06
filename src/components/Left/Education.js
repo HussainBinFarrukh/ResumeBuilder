@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { ResumeContext } from "../../contexts/ResumeContext";
 
 function Education() {
-  const { content, updateEducationData, removeFakeData } = useContext(
+  const { content, updateEducationData, removeFakeData, updateEducationData2 } = useContext(
     ResumeContext
   );
   const [btnText, setBtnText] = useState("Add");
@@ -15,6 +15,7 @@ function Education() {
   const onSubmit = (data) => {
     removeFakeData();
     updateEducationData(data);
+    updateEducationData2(data);
     setBtnText("Update");
   };
 
@@ -86,7 +87,7 @@ function Education() {
         label="Additional Info"
         name="additional1"
         variant="outlined"
-        defaultValue={content.education.additional1}
+        defaultValue={content.education.additional}
         inputRef={register}
         // onChange={handleSubmit(onSubmit)}
         style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
@@ -101,6 +102,7 @@ function Education() {
           {btnText}
         </Button>
       </form>
+
     </div>
   );
 }

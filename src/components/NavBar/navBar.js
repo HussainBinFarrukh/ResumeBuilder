@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './NavBar.css'
-import img from '../../assets/Gradient with White Text-4500x4500.png';
 
 class NavBar extends Component {
     render() {

@@ -8,7 +8,7 @@ const ResumeContextProvider = (props) => {
   const [content, setContent] = useState(
     JSON.parse(localStorage.getItem("dataLocal")) || {
       header: {},
-      professional: { },
+      professional: {},
       education: {},
       additional: [],
     }
@@ -30,7 +30,6 @@ const ResumeContextProvider = (props) => {
   function updateEducationData(data) {
     setContent({ ...content, education: data });
   }
-
   function updateAdditionalData(data) {
     setContent({ ...content, additional: Object.values(data) }); //Converting the object to an Array in order to iterate in AdditionalSkillsP.js
   }
@@ -44,8 +43,9 @@ const ResumeContextProvider = (props) => {
     setControl(false);
     setContentFake({
       header: {},
-      professional: { },
+      professional: {},
       education: {},
+      education2: {},
       additional: [],
 
     });
@@ -66,7 +66,7 @@ const ResumeContextProvider = (props) => {
         updateEducationData,
         updateAdditionalData,
         addFakeData,
-        removeFakeData,
+        removeFakeData
       }}
     >
       {/* This refers to the children that this provider/components wraps. */}

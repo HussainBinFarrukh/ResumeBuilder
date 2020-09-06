@@ -12,7 +12,7 @@ function AdditionalSkills() {
   const [btnText, setBtnText] = useState("Add");
 
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
+  const sub = (data) => {
     removeFakeData();
     updateAdditionalData(data);
     setBtnText("Update");
@@ -25,38 +25,29 @@ function AdditionalSkills() {
         className={classes.formStyle}
         noValidate
         autoComplete="off"
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit(sub)}
       >
       <label>Your Skills</label>
-        <TextField
-          id="outlined-basic"
-          label="Skills:"
+        <TextField id="outlined-basic" label="Skills:"          defaultValue={content.additional[0]}
           name="skill1"
           variant="outlined"
-          defaultValue={content.additional[0]}
           inputRef={register({
             max: {
               value: 3,
               message: "error message", // <p>error message</p>
             },
           })}
-          // onChange={handleSubmit(onSubmit)}
+          // onChange={handleSubmit(sub)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         />
      <label>Your Interests:</label>
-        <TextField
-          id="outlined-basic"
-          label="Interests: :"
+        <TextField id="outlined-basic"  label="Interests: :" defaultValue={content.additional[1]}
           name="skill2"
           variant="outlined"
-          defaultValue={content.additional[1]}
           inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
+          // onChange={handleSubmit(sub)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         />
-
-
-
         <Button
           variant="contained"
           color="secondary"

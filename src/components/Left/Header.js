@@ -24,7 +24,7 @@ function Header() {
         className={classes.formStyle}
         noValidate
         autoComplete="off"
-        // onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit(onSubmit)}
       >
         <TextField
           id="outlined-basic"
@@ -69,7 +69,6 @@ function Header() {
           inputRef={register}
           onChange={handleSubmit(onSubmit)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-          inputProps = {{maxLength:10}}
         />
 
         <TextField
@@ -82,7 +81,6 @@ function Header() {
           inputRef={register}
           onChange={handleSubmit(onSubmit)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-          inputProps = {{maxLength:5}}
           />
 
         <TextField

@@ -13,13 +13,10 @@ function HeaderP() {
     contentUse = content;
   }
 
-  let divider;
   let dash = "|";
   let comma =",";
   if (Object.keys(contentUse.header).length > 0) {
-    divider = <hr className={classes.dividerRight} />;
   } else {
-    divider = "";
     dash= "";
     comma="";
   }
